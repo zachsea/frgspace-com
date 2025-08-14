@@ -1,10 +1,26 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+import { useEffect, useState } from 'react'
 
 export const Route = createRootRoute({
-  component: () => (
+  component: RootComponent,
+})
+
+function RootComponent() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return (
     <div className="app-container">
-      <nav className="navbar">
+      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-content">
           <div className="nav-brand">
             <Link to="/" className="brand-link">
@@ -37,11 +53,9 @@ export const Route = createRootRoute({
         </div>
       </nav>
       <main className="main-content">
-        <div className="content-container">
-          <Outlet />
-        </div>
+        <Outlet />
       </main>
       <TanStackRouterDevtools />
     </div>
-  ),
-})
+  )
+}

@@ -15,8 +15,11 @@ export const Route = createFileRoute('/team/')({
 
 function Team() {
   return (
-    <div>
-      <h3>Team!</h3>
-    </div>
+    <section className="content-section">
+      <div className="content-container">
+        <h1>Our Team</h1>
+        <p>Placeholder</p>
+      </div>
+    </section>
   )
 }

@@ -15,8 +15,11 @@ export const Route = createFileRoute('/contact/')({
 
 function Contact() {
   return (
-    <div>
-      <h3>Contact!</h3>
-    </div>
+    <section className="content-section">
+      <div className="content-container">
+        <h1>Contact Us</h1>
+        <p>Placeholder</p>
+      </div>
+    </section>
   )
 }
