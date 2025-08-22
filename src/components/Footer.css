@@ -1,0 +1,148 @@
+.footer {
+  background-color: var(--cr-secondary);
+  color: var(--cr-text);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem 0;
+  align-items: start;
+}
+
+.footer-brand h3 {
+  color: var(--cr-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  gap: 3rem;
+  justify-content: flex-start;
+}
+
+.footer-section h4 {
+  color: var(--cr-primary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-section a {
+  display: flex;
+  align-items: center;
+  color: var(--cr-text);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  min-height: 24px;
+  line-height: 1.5;
+}
+
+.footer-section span {
+  display: flex;
+  align-items: center;
+  color: var(--cr-text);
+  opacity: 0.8;
+  min-height: 24px;
+  line-height: 1.5;
+}
+
+.footer-section a:hover {
+  color: var(--cr-primary);
+  opacity: 1;
+}
+
+.social-links,
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-link {
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.social-link svg {
+  flex-shrink: 0;
+  fill: currentColor;
+  stroke-width: 1.5;
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.social-link span {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  height: 18px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    text-align: left;
+  }
+
+  .footer-section {
+    text-align: left;
+  }
+
+  .footer-section h4 {
+    margin-bottom: 1rem;
+  }
+
+  .social-links,
+  .footer-links-list {
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .social-link {
+    margin-bottom: 0;
+    align-items: center;
+    gap: 0.4rem;
+    display: flex;
+  }
+
+  .social-link svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .social-link span {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    height: 16px;
+  }
+}

@@ -18,6 +18,10 @@ function RootComponent() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <div className="app-container">
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -32,6 +36,7 @@ function RootComponent() {
               to="/"
               className="nav-link"
               activeProps={{ className: 'nav-link active' }}
+              onClick={scrollToTop}
             >
               Home
             </Link>
@@ -39,6 +44,7 @@ function RootComponent() {
               to="/team"
               className="nav-link"
               activeProps={{ className: 'nav-link active' }}
+              onClick={scrollToTop}
             >
               Team
             </Link>
@@ -46,6 +52,7 @@ function RootComponent() {
               to="/contact"
               className="nav-link"
               activeProps={{ className: 'nav-link active' }}
+              onClick={scrollToTop}
             >
               Contact
             </Link>

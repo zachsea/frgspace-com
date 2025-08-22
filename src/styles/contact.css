@@ -1,0 +1,89 @@
+.content-section.contact-page {
+  padding-top: 6rem;
+}
+
+.contact-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(23, 58, 105, 0.2) 0%, rgba(11, 15, 21, 0.4) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.contact-email-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-icon {
+  color: var(--cr-primary);
+  margin-bottom: 1.5rem;
+}
+
+.contact-card h3 {
+  color: var(--cr-primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-email {
+  font-size: 1.2rem;
+  color: var(--cr-accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: rgba(121, 178, 255, 0.1);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(121, 178, 255, 0.2);
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 180px;
+  justify-content: center;
+}
+
+.contact-btn.copied {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  border-color: #22c55e;
+  color: white;
+}
+
+.contact-btn.copied:hover {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  border-color: #16a34a;
+}
+
+@media (max-width: 768px) {
+  .content-section.contact-page {
+    padding-top: 10rem;
+  }
+
+  .contact-card {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
